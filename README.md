@@ -1,4 +1,5 @@
 # 🚀 Salesforce SLA Monitor - Dashboard de Casos Críticos
+![Evidência](https://github.com/user-attachments/assets/e76f3f42-20f2-420d-8498-aeda07815536)
 
 Este projeto foi desenvolvido para otimizar a operação de suporte em **Service Cloud**, permitindo que analistas visualizem instantaneamente o status de casos críticos através de uma interface dinâmica.
 
