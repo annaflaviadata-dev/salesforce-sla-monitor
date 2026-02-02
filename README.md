@@ -13,6 +13,7 @@ O diferencial desta solução é a **transformação de dados brutos em intelig�
 - **Apex (Triggers & Controllers):** Automação de back-end para definição de prazos e consultas SOQL.
 - **JavaScript (ES6):** Manipulação de objetos `Date` para cálculos de tempo em milissegundos.
 - **SLDS (Salesforce Lightning Design System):** Estilização seguindo os padrões oficiais da plataforma.
+- **Navegação Nativa (NavigationMixin):** - Implementação de links dinâmicos que permitem ao analista acessar o registro completo do caso diretamente do dashboard com um único clique, eliminando a necessidade de buscas manuais e acelerando a operação.
 
 ## ⚙️ Funcionalidades Técnicas
 
