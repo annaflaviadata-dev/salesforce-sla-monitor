@@ -1,7 +1,9 @@
 import { LightningElement, wire } from 'lwc';
+import { NavigationMixin } from 'lightning/navigation'; // 1. Importe o Mixin
 import getPendingCases from '@salesforce/apex/CaseSLAController.getPendingCases';
 
-export default class SlaMonitor extends LightningElement {
+// Adicionado NavigationMixin ao extend para permitir a navegação
+export default class SlaMonitor extends NavigationMixin(LightningElement) {
     casosFormatados;
 
     @wire(getPendingCases)
@@ -48,5 +50,17 @@ export default class SlaMonitor extends LightningElement {
         } else if (error) {
             console.error('Erro ao buscar casos:', error);
         }
+    }
+
+    // Função para navegar até a página do registro ao clicar no link
+    handleNavigate(event) {
+        const recordId = event.target.dataset.id; 
+        this[NavigationMixin.Navigate]({
+            type: 'standard__recordPage',
+            attributes: {
+                recordId: recordId,
+                actionName: 'view'
+            }
+        });
     }
 }

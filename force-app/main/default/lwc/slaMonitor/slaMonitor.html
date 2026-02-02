@@ -5,8 +5,15 @@
                 <template for:each={casosFormatados} for:item="cs">
                     <div key={cs.Id} class={cs.classeCSS}>
                         <div class="slds-p-around_small">
-                            <p><strong>ID do Registro:</strong> {cs.Id}</p> 
-                            <p><strong>Caso:</strong> {cs.CaseNumber}</p>
+                            <p><strong>ID do Registro:</strong> {cs.Id}</p>
+                            
+                            <p>
+                                <strong>Caso:</strong> 
+                                <a href="javascript:void(0);" onclick={handleNavigate} data-id={cs.Id} style="color: #0176d3; font-weight: bold;">
+                                    {cs.CaseNumber}
+                                </a>
+                            </p> 
+
                             <p><strong>Status:</strong> {cs.Status}</p>
                             <p><strong>Prioridade:</strong> {cs.Priority}</p>
                             <p><strong>Urgência:</strong> {cs.contadorSLA}</p> 
